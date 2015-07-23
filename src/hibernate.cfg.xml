@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.username">ramon</property>
+        <property name="connection.password">milan22</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+        <property name="connection.pool_size">1</property>
+        <property name="show_sql">false</property>
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <property name="hbm2ddl.auto">create</property>
+        <property name="cache.use_second_level_cache">false</property>
+        <mapping resource="Employee.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
